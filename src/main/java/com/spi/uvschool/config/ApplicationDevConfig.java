@@ -13,6 +13,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
 
+import com.spi.uvschool.gateway.EmailServicesGateway;
+
 /**
  * @version 1.0
  * @author:
@@ -27,5 +29,9 @@ public class ApplicationDevConfig {
 	public TextEncryptor textEncryptor() {
 		return Encryptors.noOpText();
 	}
+	
+//	public EmailServicesGateway emailServicesGateway() {
+//		return EmailServicesGateway
+//	}
 
 }

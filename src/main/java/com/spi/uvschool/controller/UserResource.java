@@ -83,9 +83,6 @@ public class UserResource {
 	protected VerificationTokenService verificationTokenService;
 
 	@Autowired
-	protected EmailServicesGateway emailServicesGateway;
-
-	@Autowired
 	ApplicationConfig applicationConfig;
 
 	@Context

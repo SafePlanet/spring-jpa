@@ -46,9 +46,6 @@ public class CommonResource {
 	protected VerificationTokenService verificationTokenService;
 
 	@Autowired
-	protected EmailServicesGateway emailServicesGateway;
-	
-	@Autowired
 	public CommonService commonService;
 	
 	@Autowired

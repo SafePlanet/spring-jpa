@@ -43,7 +43,7 @@ public class VerificationTokenServiceImpl extends BaseService implements
 
 	private VerificationTokenDAO tokenRepository;
 	
-	private EmailServicesGateway emailServicesGateway;
+//	private EmailServicesGateway emailServicesGateway;
 
 	private UserDAO userRepository;
 
@@ -56,11 +56,12 @@ public class VerificationTokenServiceImpl extends BaseService implements
 	@Autowired
 	public VerificationTokenServiceImpl(UserDAO userRepository,
 			VerificationTokenDAO tokenRepository,
-			EmailServicesGateway emailServicesGateway, Validator validator) {
+//			EmailServicesGateway emailServicesGateway, 
+			Validator validator) {
 		this(validator);
 		this.userRepository = userRepository;
 		this.tokenRepository = tokenRepository;
-		this.emailServicesGateway = emailServicesGateway;
+//		this.emailServicesGateway = emailServicesGateway;
 	}
 
 	@Transactional
@@ -75,8 +76,8 @@ public class VerificationTokenServiceImpl extends BaseService implements
 				config.getEmailVerificationTokenExpiryTimeInMinutes());
 		user.addVerificationToken(token);
 		userRepository.save(user);
-		emailServicesGateway.sendVerificationToken(new EmailServiceTokenModel(
-				user, token, getConfig().getHostNameUrl()));
+//		emailServicesGateway.sendVerificationToken(new EmailServiceTokenModel(
+//				user, token, getConfig().getHostNameUrl()));
 		return token;
 	}
 
@@ -88,8 +89,8 @@ public class VerificationTokenServiceImpl extends BaseService implements
 				config.getEmailRegistrationTokenExpiryTimeInMinutes());
 		user.addVerificationToken(token);
 		userRepository.save(user);
-		emailServicesGateway.sendVerificationToken(new EmailServiceTokenModel(
-				user, token, getConfig().getHostNameUrl()));
+//		emailServicesGateway.sendVerificationToken(new EmailServiceTokenModel(
+//				user, token, getConfig().getHostNameUrl()));
 		return token;
 	}
 
@@ -124,10 +125,10 @@ public class VerificationTokenServiceImpl extends BaseService implements
 				user.addVerificationToken(token);
 				userRepository.save(user);
 			}
-			emailServicesGateway
-			.sendVerificationToken(new EmailServiceTokenModel(user,
-		
-					token, getConfig().getHostNameUrl(),keyPassword));
+//			emailServicesGateway
+//			.sendVerificationToken(new EmailServiceTokenModel(user,
+//		
+//					token, getConfig().getHostNameUrl(),keyPassword));
 		}
 
 		return token;
@@ -160,9 +161,9 @@ public class VerificationTokenServiceImpl extends BaseService implements
 		if (token == null) {
 			token = sendEmailVerificationToken(user);
 		} else {
-			emailServicesGateway
-					.sendVerificationToken(new EmailServiceTokenModel(user,
-							token, getConfig().getHostNameUrl()));
+//			emailServicesGateway
+//					.sendVerificationToken(new EmailServiceTokenModel(user,
+//							token, getConfig().getHostNameUrl()));
 		}
 		return token;
 	}

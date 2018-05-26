@@ -68,9 +68,6 @@ public class UserServiceImpl extends BaseService implements UserService {
 	private ApplicationConfig applicationConfig;
 
 	@Autowired
-	protected EmailServicesGateway emailServicesGateway;
-
-	@Autowired
 	protected CommonService commonService;
 
 

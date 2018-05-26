@@ -36,15 +36,15 @@ public class MailSenderServiceImpl implements MailSenderService {
 
 	private static Logger LOG = LoggerFactory.getLogger(MailSenderServiceImpl.class);
 
-	private final JavaMailSender mailSender;
-	private final VelocityEngine velocityEngine;
+	private final JavaMailSender mailSender = null;
+	private final VelocityEngine velocityEngine = null;
 	private ApplicationConfig config;
 	
-	@Autowired
-	public MailSenderServiceImpl(JavaMailSender mailSender, VelocityEngine velocityEngine) {
-		this.mailSender = mailSender;
-		this.velocityEngine = velocityEngine;
-	}
+//	@Autowired
+//	public MailSenderServiceImpl(JavaMailSender mailSender, VelocityEngine velocityEngine) {
+//		this.mailSender = mailSender;
+//		this.velocityEngine = velocityEngine;
+//	}
 
 	public EmailServiceTokenModel sendVerificationEmail(final EmailServiceTokenModel emailVerificationModel) {
 		Map<String, String> resources = new HashMap<String, String>();

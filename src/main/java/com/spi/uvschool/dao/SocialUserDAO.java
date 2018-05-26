@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.MultiValueMap;
@@ -33,8 +34,8 @@ public interface SocialUserDAO extends JpaRepository<SocialUser, Long> {
 	// TODO will need a JPA Query here
 	List<SocialUser> findByUserAndProviderUserId(User user, MultiValueMap<String, String> providerUserIds);
 
-	@Query("Select providerId from SocialUser where providerId = ? AND providerUserId in (?)")
-	Set<String> findByProviderIdAndProviderUserId(String providerId, Set<String> providerUserIds);
+	@Query("Select providerId from SocialUser where providerId = :providerId")
+	Set<String> findByProviderIdAndProviderUserId(@Param("providerId")String providerId);
 
 	SocialUser findByUserAndProviderIdAndProviderUserId(User user, String providerId, String providerUserId);
 

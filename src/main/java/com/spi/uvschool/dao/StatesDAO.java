@@ -15,9 +15,9 @@ public interface StatesDAO extends JpaRepository<State, Long> {
 	@Query("select s from State s")
 	List<State> getStates();
 	
-	@Query("select c from City c ,State s where c.state.id=s.id and s.id=?")
+	@Query("select c from City c ,State s where c.state.id=s.id and s.id=:stateId")
 	List<City> getCity(long stateId);
 	
-	@Query("select s from State s Where s.id=?")
+	@Query("select s from State s Where s.id=:stateId")
 	State getStateById(long stateId);
 }

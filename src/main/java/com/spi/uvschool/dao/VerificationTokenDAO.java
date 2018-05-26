@@ -20,9 +20,9 @@ import com.spi.uvschool.domain.VerificationToken;
 @Repository
 public interface VerificationTokenDAO extends JpaRepository<VerificationToken, Long> {
 
-	@Query("select t from VerificationToken t where uuid = ?")
+	@Query("select t from VerificationToken t where uuid = :uuid")
 	VerificationToken findByUuid(String uuid);
 
-	@Query("select t from VerificationToken t where token = ?")
+	@Query("select t from VerificationToken t where token = :token")
 	VerificationToken findByToken(String token);
 }

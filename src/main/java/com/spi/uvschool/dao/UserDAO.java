@@ -26,13 +26,13 @@ public interface UserDAO extends JpaRepository<User, Long> {
 
 	User findByEmailAddress(String emailAddress);
 
-	@Query("select u from User u where uuid = ?")
+	@Query("select u from User u where uuid = :uuid")
 	User findByUuid(String uuid);
 
-	@Query("select u from User u where u in (select user from AuthorizationToken where lastUpdated < ?)")
+	@Query("select u from User u where u in (select user from AuthorizationToken where lastUpdated < :lastUpdated)")
 	List<User> findByExpiredSession(Date lastUpdated);
 
-	@Query("select u from User u where u = (select user from AuthorizationToken where token = ?)")
+	@Query("select u from User u where u = (select user from AuthorizationToken where token = :token)")
 	User findBySession(String token);
 
 	@Query("select u from User u order by u.firstName, u.lastName")

@@ -90,7 +90,7 @@ public class JpaUsersConnectionRepository implements UsersConnectionRepository {
 	public Set<String> findUserIdsConnectedTo(String providerId,
 			Set<String> providerUserIds) {
 		return socialUserRepository.findByProviderIdAndProviderUserId(
-				providerId, providerUserIds);
+				providerId);
 	}
 
 	public ConnectionRepository createConnectionRepository(String userId) {
