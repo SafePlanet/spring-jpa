@@ -7,5 +7,5 @@ package com.spi.uvschool.domain;
 
 public enum Role {
 
-	authenticated, administrator, anonymous, teacher, individual, superAdmin, transporter
+	authenticated, administrator, anonymous, superAdmin
 }

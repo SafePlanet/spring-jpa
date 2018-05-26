@@ -25,7 +25,7 @@ public class Address extends BaseEntity {
 	// private static final int DEFAULT_EXPIRY_TIME_IN_MINS = 60 * 24; // 24 hours
 
 	@Enumerated(EnumType.STRING)
-	private String addressType;
+	private AddressType addressType;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -158,7 +158,7 @@ public class Address extends BaseEntity {
 	/**
 	 * @return the addressType
 	 */
-	public String getAddressType() {
+	public AddressType getAddressType() {
 		return addressType;
 	}
 
@@ -166,7 +166,7 @@ public class Address extends BaseEntity {
 	 * @param addressType
 	 *            the addressType to set
 	 */
-	public void setAddressType(String addressType) {
+	public void setAddressType(AddressType addressType) {
 		this.addressType = addressType;
 	}
 

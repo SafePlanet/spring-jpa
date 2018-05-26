@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.2.RELEASE</version>
+		<version>2.0.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -41,6 +41,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,8 +65,17 @@
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-autoconfigure</artifactId>
-    <version>2.0.2.RELEASE</version>
+    </dependency>
+    
+    
+    <!-- https://mvnrepository.com/artifact/org.springframework.social/spring-social-twitter -->
+<dependency>
+    <groupId>org.springframework.social</groupId>
+    <artifactId>spring-social-twitter</artifactId>
+    <version>1.0.2.RELEASE</version>
 </dependency>
+
+    
 		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
 <dependency>
     <groupId>javax.ws.rs</groupId>
@@ -79,34 +92,25 @@
 <dependency>
     <groupId>commons-codec</groupId>
     <artifactId>commons-codec</artifactId>
-    <version>1.9</version>
-</dependency>
+    </dependency>
 		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
 <dependency>
     <groupId>joda-time</groupId>
     <artifactId>joda-time</artifactId>
-    <version>2.9.9</version>
-</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.0-api -->
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>1.0.0.Final</version>
-		</dependency>
+    </dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.2.17.Final</version>
-</dependency>
+    </dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
 <dependency>
     <groupId>org.springframework.data</groupId>
     <artifactId>spring-data-jpa</artifactId>
-    <version>1.0.0.RELEASE</version>
-</dependency>
+    </dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
 <dependency>
     <groupId>org.apache.velocity</groupId>
@@ -123,8 +127,7 @@
 <dependency>
     <groupId>javax.validation</groupId>
     <artifactId>validation-api</artifactId>
-    <version>1.0.0.GA</version>
-</dependency>
+    </dependency>
 		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-server -->
 <dependency>
     <groupId>com.sun.jersey</groupId>
@@ -135,8 +138,7 @@
 <dependency>
     <groupId>javax.json</groupId>
     <artifactId>javax.json-api</artifactId>
-    <version>1.1.2</version>
-</dependency>
+    </dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.social/spring-social-core -->
 <dependency>
     <groupId>org.springframework.social</groupId>

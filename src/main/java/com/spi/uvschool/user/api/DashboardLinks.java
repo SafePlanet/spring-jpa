@@ -39,14 +39,8 @@ public class DashboardLinks {
 
 		if (role.equals(Role.authenticated)) {
 			buildUserAccessList();
-		} else if (role.equals(Role.teacher)) {
-			buildTeacherAccessList();
 		} else if (role.equals(Role.administrator)) {
 			buildAdministratorAccessList(deviceUserAgent);
-		} else if (role.equals(Role.individual)) {
-			buildIndividualAccessList();
-		} else if (role.equals(Role.transporter)) {
-			buildTransporterAccessList();
 		} else if (role.equals(Role.superAdmin)) {
 			buildSuperAdminAccessList();
 		}

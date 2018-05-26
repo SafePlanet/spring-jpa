@@ -8,6 +8,7 @@ package com.spi.uvschool.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import com.spi.uvschool.domain.VerificationToken;
 
@@ -16,6 +17,7 @@ import com.spi.uvschool.domain.VerificationToken;
  * @author:
  * 
  */
+@Repository
 public interface VerificationTokenDAO extends JpaRepository<VerificationToken, Long> {
 
 	@Query("select t from VerificationToken t where uuid = ?")

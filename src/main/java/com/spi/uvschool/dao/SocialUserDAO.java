@@ -22,7 +22,6 @@ import com.spi.uvschool.domain.User;
 
 @Repository
 @Transactional
-@Component
 public interface SocialUserDAO extends JpaRepository<SocialUser, Long> {
 
 	List<SocialUser> findAllByUser(User user);
@@ -34,7 +33,7 @@ public interface SocialUserDAO extends JpaRepository<SocialUser, Long> {
 	// TODO will need a JPA Query here
 	List<SocialUser> findByUserAndProviderUserId(User user, MultiValueMap<String, String> providerUserIds);
 
-	@Query("Select userId from SocialUser where providerId = ? AND providerUserId in (?)")
+	@Query("Select providerId from SocialUser where providerId = ? AND providerUserId in (?)")
 	Set<String> findByProviderIdAndProviderUserId(String providerId, Set<String> providerUserIds);
 
 	SocialUser findByUserAndProviderIdAndProviderUserId(User user, String providerId, String providerUserId);
