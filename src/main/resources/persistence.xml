@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="samplePersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.spi.domain.User</class>
+		<class>com.spi.domain.SocialUser</class>
+		<class>com.spi.domain.Absent</class>
+		<class>com.spi.domain.AbsentReason</class>
+		<class>com.spi.domain.Address</class>
+		<class>com.spi.domain.AddressType</class>
+		<class>com.spi.domain.Alert</class>
+		<class>com.spi.domain.AlertConfig</class>
+		<class>com.spi.domain.AlertType</class>
+		<class>com.spi.domain.AuthorizationToken</class>
+		<class>com.spi.domain.Complaints</class>
+	    <class>com.spi.domain.City</class>
+		<class>com.spi.domain.Devices</class>
+		<class>com.spi.domain.DeviceModelType</class>
+		<class>com.spi.domain.EmailTemplate</class>
+		<class>com.spi.domain.Groups</class>
+		<class>com.spi.domain.Location</class>
+		<class>com.spi.domain.Role</class>
+		<class>com.spi.domain.Route</class>
+		<class>com.spi.domain.RouteScheduleDetails</class>
+		<class>com.spi.domain.RouteFleetDeviceXREF</class>
+		<class>com.spi.domain.School</class>
+		<class>com.spi.domain.SchoolConfig</class>
+		<class>com.spi.domain.SchoolHoliday</class>
+		<class>com.spi.domain.SchoolHolidayMasterData</class>
+		<class>com.spi.domain.SchoolType</class>
+		<class>com.spi.domain.State</class>
+		<class>com.spi.domain.Student</class>
+		<class>com.spi.domain.StudentRouteXREF</class>
+		<class>com.spi.domain.Fleet</class>
+		<class>com.spi.domain.UserDevice</class>
+		<class>com.spi.domain.UserGroupSchool</class>
+		<class>com.spi.domain.UserMessage</class>
+		<class>com.spi.domain.Users</class>
+		<class>com.spi.domain.VerificationToken</class>
+		<class>com.spi.domain.WayPoint</class>
+		<class>com.spi.domain.MessageTemplate</class>
+		<class>com.spi.domain.NotificationStatus</class>
+		<class>com.spi.domain.StudentNotificationStatus</class>
+		<class>com.spi.domain.Geofence</class>
+		<class>com.spi.domain.DeviceGeofence</class>
+		<class>com.spi.domain.PickOrDropRequest</class>
+		
+		<properties>
+			<!-- value="create" to build a new database on each run; value="update" 
+				to modify an existing database; value="create-drop" means the same as "create" 
+				but also drops tables when Hibernate closes; value="validate" makes no changes 
+				to the database -->
+			<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
+			<property name="hibernate.connection.charSet" value="UTF-8" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="org.hibernate.SQL" value="DEBUG" />
+
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>

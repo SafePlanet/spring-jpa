@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lost Password</title>
+</head>
+
+<body bgcolor="#8d8e90">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#8a8e80">
+  <tr>
+    <td>
+    	<table width="1050" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center">
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="61"><a href= "http://trackho.com/index.php" target="_blank"><img src="http://www.trackho.com/images/tracko/spi_email_circle.jpg" width="61" height="76" border="0" alt=""/></a></td>
+                <td width="144"><a href= "http://trackho.com/index.php" target="_blank"><img src="http://www.trackho.com/images/tracko/logo2.png" width="144" height="76" border="0" alt=""/></a></td>
+                <td width="493"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="46" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="30"><img src="http://www.trackho.com/images/tracko/spi_email_top_line.jpg" width="700" height="30" border="0" alt=""/></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td align="center">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="10%">&nbsp;</td>
+                <td width="80%" align="left" valign="top"><font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:24px"><strong><em>Dear  ${model.getUserName()},</em></strong></font><br />
+                  <font style="font-family: Verdana, Geneva, sans-serif; color:#666766; font-size:13px; line-height:21px">
+                  Greetings from Trackho Team!
+<br /><br />
+<!–– NEED TO CHNAGE BELOW ACCORDING TO EACH BUSSINESS CASE -->
+
+ ${model.getEmailBody()}
+ <br/>
+ <br/>
+ <br/>
+ Email sent on Behalf of
+ <font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:12px"><strong><em>${model.getSchoolName()}</font> <br />
+ ${model.getSchoolAddress()}<br/>
+ ${model.getSchoolContact()}<br/> <br/>
+
+
+<!–– NEED TO MAKE CHNAGEs ABOVE ACCORDING TO EACH BUSSINESS CASE -->
+<br /><br />
+<font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:12px"><strong><em>Thanks and Regards</font> <br />
+Trackho Team
+<br />
+<a href="http://www.trackho.com/index.php">http://www.trackho.com/index.php</a> 
+</font></td>
+                <td width="10%">&nbsp;</td>
+              </tr>
+              <tr>
+                </table></td>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><img src="http://www.trackho.com/images/tracko/spi_email_bottom_line.jpg" width="1000" height="8" style="display:block" border="0" alt=""/></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="13%" align="center">&nbsp;</td>
+              <td width="9%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://trackho.com/about.php" style="color:#010203; text-decoration:none"><strong>ABOUT </strong></a></font></td>
+              <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+              <td width="11%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://trackho.com/contact.php" style="color:#010203; text-decoration:none"><strong>CONTACT US </strong></a></font></td>
+              <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+              <td width="17%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://trackho.com/index.php" style="color:#010203; text-decoration:none"><strong>STAY CONNECTED</strong></a></font></td>
+              <td width="5%">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#231f20; font-size:9px"><strong>Office | Safeplanet Innovations, JSSATE STEP, C-20/1, Sector 62, Noida, Uttar Pradesh 201301 | Tel: +91-9250005928 | <a href="mailto:spinnovations.india@gmail.com?subject=Need more information" style="font-size:11px;">spinnovations.india@gmail.com</a></strong></font></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
